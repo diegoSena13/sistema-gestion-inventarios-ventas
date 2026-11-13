@@ -1,0 +1,453 @@
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.productos-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f5f7f9;
+    overflow-x: hidden;
+}
+
+.productos-content {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 30px 35px;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.productos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.productos-header h2 {
+    color: #183b2b;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.productos-header p {
+    color: #758078;
+    font-size: 14px;
+    margin: 6px 0 0;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn-producto {
+    background-color: #176b45;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-producto:hover {
+    background-color: #105536;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-producto-secundario {
+    background-color: #e9efeb;
+    color: #315b45;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+}
+
+.btn-producto-secundario:hover {
+    background-color: #dce8e0;
+    color: #183b2b;
+}
+
+/* =========================================
+   TARJETAS Y FORMULARIOS
+========================================= */
+
+.productos-card {
+    background: #ffffff;
+    border: 1px solid #e9eeeb;
+    border-radius: 13px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(20, 50, 35, 0.04);
+}
+
+.productos-card h5 {
+    color: #244b36;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.productos-card label {
+    color: #48574e;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.productos-card .form-control {
+    min-height: 42px;
+    border: 1px solid #dce4de;
+    border-radius: 7px;
+    font-size: 14px;
+    padding: 10px 12px;
+}
+
+.productos-card .form-control:focus {
+    border-color: #31966a;
+    box-shadow: 0 0 0 3px rgba(49, 150, 106, 0.12);
+}
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.productos-search {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.productos-search .form-control {
+    height: 43px;
+    border: 1px solid #dce4de;
+    border-radius: 8px;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.productos-search .form-control:focus {
+    border-color: #31966a;
+    box-shadow: 0 0 0 3px rgba(49, 150, 106, 0.10);
+}
+
+/* =========================================
+   TABLA DE PRODUCTOS
+========================================= */
+
+.productos-table-card {
+    background: #ffffff;
+    border: 1px solid #e9eeeb;
+    border-radius: 13px;
+    padding: 22px;
+    box-shadow: 0 3px 12px rgba(20, 50, 35, 0.04);
+    width: 100%;
+}
+
+.productos-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.productos-table-header h5 {
+    color: #244b36;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.productos-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.productos-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 0;
+}
+
+.productos-table thead th {
+    background-color: #f1f6f3;
+    color: #496052;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 15px 13px;
+    border-bottom: 1px solid #e1e9e3;
+    white-space: nowrap;
+}
+
+.productos-table tbody td {
+    color: #46534b;
+    font-size: 13px;
+    padding: 15px 13px;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.productos-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.productos-table tbody tr:hover {
+    background-color: #f8fbf9;
+}
+
+.productos-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   ESTADOS DE INVENTARIO
+========================================= */
+
+.stock-normal {
+    display: inline-block;
+    background-color: #e5f5eb;
+    color: #247343;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stock-bajo {
+    display: inline-block;
+    background-color: #fff1dc;
+    color: #a8640b;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================
+   ACCIONES DE LA TABLA
+========================================= */
+
+.btn-accion {
+    border: none;
+    border-radius: 7px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-editar {
+    background-color: #e8f1ff;
+    color: #2864a5;
+}
+
+.btn-editar:hover {
+    background-color: #d5e6ff;
+    color: #174d89;
+}
+
+.btn-desactivar {
+    background-color: #ffebeb;
+    color: #bd3d3d;
+}
+
+.btn-desactivar:hover {
+    background-color: #ffdada;
+    color: #982b2b;
+}
+
+/* =========================================
+   MENSAJES Y ESTADOS
+========================================= */
+
+.productos-alerta {
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.productos-vacio {
+    text-align: center;
+    padding: 45px 20px;
+    color: #87938b;
+}
+
+.productos-vacio i {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 12px;
+    color: #aab8af;
+}
+
+.productos-vacio p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+    .productos-content {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productos-content {
+        padding: 20px 14px;
+    }
+
+    .productos-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .productos-header h2 {
+        font-size: 23px;
+    }
+
+    .productos-search {
+        max-width: 100%;
+    }
+
+    .productos-card,
+    .productos-table-card {
+        padding: 17px;
+    }
+
+    .productos-table-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-content {
+        padding: 15px 10px;
+    }
+
+    .productos-header h2 {
+        font-size: 21px;
+    }
+
+    .btn-producto {
+        width: 100%;
+    }
+
+    .productos-card,
+    .productos-table-card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+}
+
+
+/* =========================================
+   AJUSTES DE DISTRIBUCIÓN Y ESPACIO
+========================================= */
+
+.productos-container {
+    width: 100%;
+    max-width: none;
+}
+
+.productos-content {
+    width: 100%;
+    max-width: none;
+    padding: 30px 35px;
+    margin: 0;
+}
+
+/* Encabezado de productos */
+.productos-header {
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Tarjeta de listado */
+.productos-table-card {
+    width: 100%;
+    max-width: none;
+}
+
+/* Buscador */
+.productos-search {
+    width: 320px;
+    max-width: 100%;
+}
+
+.productos-search .form-control {
+    width: 100%;
+    height: 43px;
+    padding: 10px 14px 10px 38px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Distribución del encabezado de tabla */
+.productos-table-header {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tabla */
+.productos-table {
+    width: 100%;
+    min-width: 950px;
+}
+
+.productos-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+/* Acciones */
+.productos-table td:last-child,
+.productos-table th:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Pantallas medianas */
+@media (max-width: 992px) {
+    .productos-content {
+        padding: 22px 18px;
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+    .productos-content {
+        padding: 18px 12px;
+    }
+
+    .productos-search {
+        width: 100%;
+    }
+
+    .productos-table-header {
+        align-items: stretch;
+    }
+}
+

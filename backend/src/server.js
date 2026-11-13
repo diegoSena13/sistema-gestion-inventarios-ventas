@@ -7,6 +7,7 @@ const authRoutes = require('./routes/auth.routes');
 const productosRoutes = require('./routes/productos.routes');
 const inventarioRoutes = require('./routes/inventario.routes');
 const ventasRoutes = require('./routes/ventas.routes');
+const usuariosRoutes = require('./routes/usuarios.routes');
 
 
 const app = express();
@@ -46,6 +47,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/productos', productosRoutes);
 app.use('/api/inventario', inventarioRoutes);
 app.use('/api/ventas', ventasRoutes);
+app.use('/api/usuarios', usuariosRoutes);
 
 
 // Puerto del servidor

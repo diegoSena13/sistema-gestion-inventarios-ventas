@@ -1,0 +1,92 @@
+
+/* =========================================
+   CONFIGURACIÓN GLOBAL
+========================================= */
+
+:root {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: #34443a;
+    background-color: #f4f7f5;
+
+    font-weight: 400;
+}
+
+/* =========================================
+   REINICIO GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 320px;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   TIPOGRAFÍA
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #183b2b;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* =========================================
+   ENLACES
+========================================= */
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}

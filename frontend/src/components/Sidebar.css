@@ -1,0 +1,103 @@
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #176b45;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5px 30px;
+}
+
+.sidebar-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.sidebar-brand h5 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.sidebar-brand small {
+    color: #c7e3d3;
+    font-size: 11px;
+}
+
+.sidebar-section {
+    color: #b9d8c7;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    color: #e1f0e8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.sidebar-link i {
+    font-size: 18px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,0.12);
+    color: white;
+}
+
+.sidebar-link.active {
+    background: white;
+    color: #176b45;
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 15px 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #c7e3d3;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}

@@ -1,6 +1,7 @@
 
 const jwt = require('jsonwebtoken');
 
+// Verificar que el usuario tenga un token válido
 const verificarToken = (req, res, next) => {
     const authorization = req.headers.authorization;
 
@@ -27,4 +28,19 @@ const verificarToken = (req, res, next) => {
     }
 };
 
-module.exports = { verificarToken };
+// Verificar que el usuario sea administrador
+const verificarAdmin = (req, res, next) => {
+    if (!req.usuario || req.usuario.rol !== 'administrador') {
+        return res.status(403).json({
+            success: false,
+            message: 'No tienes permisos para realizar esta operación'
+        });
+    }
+
+    next();
+};
+
+module.exports = {
+    verificarToken,
+    verificarAdmin
+};

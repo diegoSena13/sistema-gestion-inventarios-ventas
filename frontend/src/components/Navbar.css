@@ -1,0 +1,52 @@
+
+.main-navbar {
+    height: 75px;
+    background: white;
+    border-bottom: 1px solid #e9eeeb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.main-navbar h6 {
+    color: #26382f;
+    font-weight: 700;
+}
+
+.main-navbar small {
+    color: #89958e;
+    font-size: 12px;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.navbar-user-info strong {
+    font-size: 13px;
+    color: #34483d;
+    text-transform: capitalize;
+}
+
+.navbar-user-info small {
+    text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+    .main-navbar {
+        padding: 0 15px;
+    }
+
+    .navbar-user-info {
+        display: none;
+    }
+}
